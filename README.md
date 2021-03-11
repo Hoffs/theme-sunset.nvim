@@ -4,6 +4,8 @@ Simple plugin that automatically switches theme from dark to light based on sun 
 It does not use any API to get information about current sun position, but relies on provided
 latitude/longtitude, time and some smart calculations (variant of suncalc).
 
+For example see: https://www.suncalc.org/
+
 For plugin to work properly your latitude and longtitude has to be provided.
 
 It works primarily by setting background option to 'dark' or 'light', but can also change colorscheme
@@ -11,6 +13,8 @@ as well.
 
 The plugin also starts a timer task that runs indefinitely every 5 minutes that checks and updates
 colorscheme and background.
+
+!! This plugin might only work Neovim 0.5+
 
 ## Configuration
 
