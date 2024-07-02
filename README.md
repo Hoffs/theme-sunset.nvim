@@ -2,11 +2,11 @@
 
 Simple plugin that automatically switches theme from dark to light based on sun position.
 It does not use any API to get information about current sun position, but relies on provided
-latitude/longtitude, time and some smart calculations (variant of suncalc).
+latitude/longitude, time and some smart calculations (variant of suncalc).
 
 For example see: https://www.suncalc.org/
 
-For plugin to work properly your latitude and longtitude has to be provided.
+For plugin to work properly your latitude and longitude has to be provided.
 
 It works primarily by setting background option to 'dark' or 'light', but can also change colorscheme
 as well.
@@ -21,9 +21,9 @@ colorscheme and background.
 Minimal required configuration is providing coordinates of your location.
 
 ```VimL
-"Latitude/Longtitude
+"Latitude/longitude
 let g:theme_sunset_location_latitude='48.864716'
-let g:theme_sunset_location_longtitude='2.349014'
+let g:theme_sunset_location_longitude='2.349014'
 ```
 
 Theme switch will happen when sun altitude is below/above 0. This can also be configured so that

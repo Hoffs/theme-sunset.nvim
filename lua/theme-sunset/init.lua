@@ -5,13 +5,13 @@ local is_night_set = false
 local function get_lat_long()
     -- Paris is used as default lat/long
     local latitude = vim.g.theme_sunset_location_latitude or '48.864716'
-    local longtitude = vim.g.theme_sunset_location_longtitude or '2.349014'
-    return tonumber(latitude), tonumber(longtitude)
+    local longitude = vim.g.theme_sunset_location_longitude or '2.349014'
+    return tonumber(latitude), tonumber(longitude)
 end
 
 local function is_night()
-    local latitude, longtitude = get_lat_long()
-    local sc = SunCalc:new({ latitude = latitude, longtitude = longtitude })
+    local latitude, longitude = get_lat_long()
+    local sc = SunCalc:new({ latitude = latitude, longitude = longitude })
     local _, altitude = sc:get_sun_pos()
     -- Sun sets at 0
     local threshold = tonumber(vim.g.theme_sunset_threshold) or 0
